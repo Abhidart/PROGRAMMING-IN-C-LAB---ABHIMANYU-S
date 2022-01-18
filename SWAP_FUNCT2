@@ -1,0 +1,20 @@
+// program to swap 2 numbers - call by reference
+#include <stdio.h>
+
+void swapNum(int *num1, int *num2)
+{
+    *num1 = *num2 + *num1;
+    *num2 = *num1 - *num2;
+    *num1 = *num1 - *num2;
+    printf("\nAfter swapping : \n num1 = %d and num2 = %d\n", *num1, *num2);
+}
+
+void main()
+{
+    int num1, num2;
+    printf("Enter 2 numbers to swap : ");
+    scanf("%d%d", &num1, &num2);
+    printf("\nBefore swapping : \n num1 = %d and num2 = %d\n", num1, num2);
+    swapNum(&num1, &num2);
+    printf("\nAfter swapping (in main) : \n num1 = %d and num2 = %d\n", num1, num2);
+}
