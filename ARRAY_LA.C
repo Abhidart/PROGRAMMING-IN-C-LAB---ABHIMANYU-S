@@ -2,7 +2,7 @@
 #include<conio.h>
 void main()
 {
-	int a[50],n,i;
+	int n,i,a[50],l;
 	clrscr();
 	printf("Enter a number :");
 	scanf("%d",&n);
@@ -11,10 +11,12 @@ void main()
 	{
 		scanf("%d",&a[i]);
 	}
-	printf("Array elements are :");
+	l=a[0];
 	for(i=0;i<n;i++)
 	{
-		printf("%d\t",a[i]);
+		if(a[i]>l)
+		l=a[i];
 	}
+	printf("Largest elements :%d",l);
 	getch();
 }

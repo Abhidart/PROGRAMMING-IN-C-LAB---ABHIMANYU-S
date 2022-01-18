@@ -2,19 +2,19 @@
 #include<conio.h>
 void main()
 {
-	int a[50],n,i;
+	int n,i,a[50],sum=0;
 	clrscr();
-	printf("Enter a number :");
+	printf("Enter a number");
 	scanf("%d",&n);
-	printf("Enter the array elements :\n");
+	printf("Enter the array elements");
 	for(i=0;i<n;i++)
 	{
 		scanf("%d",&a[i]);
 	}
-	printf("Array elements are :");
 	for(i=0;i<n;i++)
 	{
-		printf("%d\t",a[i]);
+		sum=sum+a[i];
 	}
+	printf("Sum of the elements are%d",sum);
 	getch();
 }
