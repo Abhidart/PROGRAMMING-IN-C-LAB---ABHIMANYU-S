@@ -1,0 +1,26 @@
+// program to convert given number of days to years months weeks and days
+#include <stdio.h>
+
+void getFullYear() {
+    int daysAsInput, years = 0, months = 0, weeks = 0, days = 0;
+    printf("Enter the number of days ");
+    scanf("%d", &daysAsInput);
+    years = daysAsInput / 365;
+    int remainingDays = daysAsInput % 365;
+    months = remainingDays / 30;
+    remainingDays = remainingDays % 30;
+    weeks = remainingDays / 7;
+    remainingDays = remainingDays % 7;
+    days = remainingDays;
+    // since we take 1 month = 30 days, the months with 31 days and februvary are left out, therefore inputing 1day before an year(in days) return 0 years 12 months 0 weeks and 4 days, so we add the leftout 3 days and make it 7
+    if (months == 12 && days == 4)
+    {
+        days += 3;
+    }
+    printf("%d years %d months %d weeks %d days", years, months, weeks, days);
+}
+
+int main() {
+    getFullYear();
+    return 0;
+}
