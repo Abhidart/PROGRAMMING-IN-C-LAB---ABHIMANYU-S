@@ -1,0 +1,20 @@
+// program to find the factorial of a number using recursive function
+
+#include<stdio.h>
+
+int getFactorial(int num) {
+    //base case / recursion stopper
+    if (num == 0) {
+        return 1;
+    } else {
+        //recursive case
+        return (num * getFactorial(num-1));
+    }
+}
+
+void main() {
+    int num;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    printf("Factorial of %d is %d",num,getFactorial(num));
+}
