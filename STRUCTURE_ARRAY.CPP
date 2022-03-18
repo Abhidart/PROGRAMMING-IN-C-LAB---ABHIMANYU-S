@@ -8,7 +8,7 @@ int main()
 }
 void create()
 {
-	int arr[10],n,i=0;
+	int arr[50],n,i=0;
 	clrscr();
 	printf("Enter the limit of the array: ");
 	scanf("%d",&n);
